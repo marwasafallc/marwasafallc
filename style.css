@@ -78,3 +78,23 @@ footer p{font-size:.92rem;color:#bbb}
 .copy{border-top:1px solid #333;padding-top:20px;text-align:center;font-size:.85rem;color:#888}
 
 @media(max-width:640px){nav a{margin:0 12px 0 0}.hero{padding:60px 0}}
+
+/* Service items */
+.svc-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:18px}
+.svc{border:1px solid var(--line);border-radius:12px;padding:20px;background:#fff;display:flex;flex-direction:column;transition:.2s}
+.svc:hover{border-color:var(--red);box-shadow:0 10px 24px rgba(200,16,46,.10);transform:translateY(-3px)}
+.svc h3{font-size:1.05rem;margin-bottom:6px}
+.svc p{color:var(--muted);font-size:.92rem;flex:1;margin-bottom:14px}
+.svc .btn{padding:9px 18px;font-size:.88rem;text-align:center}
+.svc .badge{align-self:flex-start;background:var(--red-soft);color:var(--red);font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px}
+.search{max-width:520px;margin:0 auto 10px}
+.msg{padding:14px 18px;border-radius:8px;font-weight:600;display:none}
+.msg.ok{display:block;background:#e8f7ee;color:#146c3a;border-left:4px solid #1fa75a}
+.msg.err{display:block;background:var(--red-soft);color:var(--red-dark);border-left:4px solid var(--red)}
+
+/* Sub-categories and email card */
+.sub{margin:26px 0 4px;font-size:1.1rem;color:var(--red);border-left:4px solid var(--red);padding-left:10px}
+.mail-card{text-align:center;border:1px solid var(--line);border-radius:16px;padding:44px 24px;background:#fff;box-shadow:0 10px 30px rgba(200,16,46,.08)}
+.mail-card .big{font-size:3rem;margin-bottom:8px}
+.mail-card h2{margin:0 0 8px}
+.mail-card .addr{display:inline-block;font-size:1.3rem;font-weight:800;margin:14px 0 22px;word-break:break-all}
