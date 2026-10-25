@@ -34,7 +34,7 @@
 <div class="page-head">
   <div class="container">
     <h1>Contact Us</h1>
-    <p>Questions? Send us an email and we will reply soon.</p>
+    <p>Questions? Email us or send a message below and we will reply soon.</p>
   </div>
 </div>
 
@@ -47,18 +47,70 @@
       <a class="addr" href="mailto:contact@marwasafallc.com">contact@marwasafallc.com</a><br>
       <a class="btn" href="mailto:contact@marwasafallc.com?subject=Question%20for%20Marwa%20Safa">Send an Email</a>
     </div>
-    <div class="tips" style="margin-top:28px">
-      <h3>You can write to us about</h3>
-      <ul>
-        <li>Questions about our guides and resources</li>
-        <li>Suggestions for new topics or tools</li>
-        <li>Corrections or broken links you found</li>
-        <li>Business and partnership enquiries</li>
-      </ul>
-    </div>
+    <h2 style="margin-top:36px;text-align:center">Or send us a message</h2>
+    <form id="contactForm" class="contact-form" novalidate>
+      <label for="cname">Your name</label>
+      <input type="text" id="cname" name="name" placeholder="Your full name" required autocomplete="name">
+      <label for="cemail">Email address</label>
+      <input type="email" id="cemail" name="email" placeholder="you@example.com" required autocomplete="email">
+      <label for="ctopic">How can we help you?</label>
+      <select id="ctopic" name="topic" required>
+        <option value="">Choose a topic...</option>
+        <option>General question</option>
+        <option>Business registration</option>
+        <option>Website and hosting</option>
+        <option>AI and SEO tools</option>
+        <option>VPN and security</option>
+        <option>Partnership or business enquiry</option>
+        <option>Other</option>
+      </select>
+      <label for="cmsg">Your message</label>
+      <textarea id="cmsg" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <button class="btn" type="submit" id="sendBtn" style="cursor:pointer">Send Message</button>
+      <div class="msg" id="formMsg" role="status"></div>
+    </form>
     <p style="text-align:center;margin-top:20px;color:#5b626b">We usually reply within 1 to 2 business days.</p>
   </div>
 </div>
+
+<script>
+var form = document.getElementById('contactForm');
+var msg = document.getElementById('formMsg');
+var btn = document.getElementById('sendBtn');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  msg.className = 'msg';
+  if (!form.name.value.trim() || !form.email.value.trim() || !form.topic.value || !form.message.value.trim()) {
+    msg.className = 'msg err';
+    msg.textContent = 'Please fill in all the fields.';
+    return;
+  }
+  if (form._honey.value) { return; }
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  var data = new FormData(form);
+  data.append('_subject', 'New message from Marwa Safa website');
+  data.append('_template', 'table');
+  fetch('https://formsubmit.co/ajax/contact@marwasafallc.com', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: data
+  }).then(function (r) { return r.json(); }).then(function (j) {
+    if (j.success === 'true' || j.success === true) {
+      msg.className = 'msg ok';
+      msg.textContent = 'Thank you! Your message has been sent. We will reply soon.';
+      form.reset();
+    } else { throw new Error('failed'); }
+  }).catch(function () {
+    msg.className = 'msg err';
+    msg.textContent = 'Sorry, the message could not be sent. Please email us directly at contact@marwasafallc.com.';
+  }).finally(function () {
+    btn.disabled = false;
+    btn.textContent = 'Send Message';
+  });
+});
+</script>
 
 <footer>
   <div class="container">
