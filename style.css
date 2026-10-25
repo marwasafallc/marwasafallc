@@ -98,3 +98,57 @@ footer p{font-size:.92rem;color:#bbb}
 .mail-card .big{font-size:3rem;margin-bottom:8px}
 .mail-card h2{margin:0 0 8px}
 .mail-card .addr{display:inline-block;font-size:1.3rem;font-weight:800;margin:14px 0 22px;word-break:break-all}
+
+/* Category, sub-pages and articles */
+.crumbs{font-size:.88rem;color:var(--muted);margin-bottom:18px}
+.crumbs a{font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 4px}
+.chips a{border:1px solid var(--line);border-radius:30px;padding:7px 16px;font-size:.88rem;font-weight:600;color:var(--text);background:#fff}
+.chips a:hover{border-color:var(--red);color:var(--red)}
+.tips{background:#fafafa;border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin:22px 0}
+.tips h3{margin-bottom:8px;font-size:1.05rem}
+.tips ul{padding-left:20px}
+.tips li{margin-bottom:6px;color:#3a4048}
+.article{max-width:760px;margin:0 auto;padding:50px 0 70px}
+.article h2{margin:30px 0 10px;font-size:1.4rem}
+.article p,.article li{color:#3a4048;margin-bottom:12px}
+.article ul,.article ol{padding-left:24px;margin-bottom:12px}
+.meta{color:var(--muted);font-size:.88rem;margin-bottom:22px}
+.back{display:inline-block;margin-top:24px;font-weight:700}
+.card .tagline{font-size:.78rem;font-weight:700;color:var(--red);letter-spacing:.4px;margin-bottom:8px;display:block}
+.cat-card ul{list-style:none;padding:0;margin:0 0 14px}
+.cat-card li{padding:5px 0;font-size:.93rem}
+
+/* ===== Version 3: logo, polish ===== */
+.logo{display:flex;align-items:center;gap:10px}
+.logo-img{height:44px;width:auto;display:block}
+.logo-text{font-size:1.3rem;font-weight:800;letter-spacing:-.3px;color:var(--text)}
+.logo-text span{color:var(--red)}
+footer .logo{display:flex;margin-bottom:12px}
+footer .logo-text{color:#fff}
+.logo-tile{background:#fff;border-radius:10px;padding:5px 7px;display:flex}
+footer .logo-img{height:34px}
+footer p a{color:#ddd}
+
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:max(2%,calc(50% - 560px));top:30px;width:340px;height:380px;background:url(logo-mark.png) no-repeat center/contain;opacity:.08;pointer-events:none}
+.hero .container{position:relative}
+@media(max-width:800px){.hero::before{display:none}}
+
+.trust{border-bottom:1px solid var(--line);background:#fff}
+.trust-row{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;padding:16px 0;font-weight:600;font-size:.92rem;color:var(--muted)}
+
+.chips-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:34px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:30px;padding:8px 18px;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer;color:var(--text)}
+.chip:hover{border-color:var(--red);color:var(--red)}
+.chip.active{background:var(--red);border-color:var(--red);color:#fff}
+
+.article .lead{font-size:1.1rem}
+.article ol li,.article ul li{margin-bottom:8px}
+.rel{padding-left:22px}
+.rel li{margin-bottom:8px}
+
+.about-grid{display:grid;gap:40px;grid-template-columns:1fr 280px;align-items:start}
+.about-logo{position:sticky;top:100px;text-align:center;border:1px solid var(--line);border-radius:16px;padding:30px 20px;background:#fff}
+.about-logo img{max-width:100%;height:auto;max-height:340px}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr}.about-logo{position:static;order:-1}.logo-text{font-size:1.15rem}.logo-img{height:38px}}

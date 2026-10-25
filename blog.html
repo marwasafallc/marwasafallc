@@ -3,15 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | MarwaSafaLLC</title>
+<title>Blog | Marwa Safa</title>
 <meta name="description" content="Guides for starting and growing your business online.">
+<meta name="theme-color" content="#C8102E">
+<meta property="og:title" content="Blog | Marwa Safa">
+<meta property="og:description" content="Guides for starting and growing your business online.">
+<meta property="og:image" content="https://marwasafallc.com/logo-full.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="container nav">
-    <a href="index.html" class="logo">Marwa<span>Safa</span>LLC</a>
+    <a href="index.html" class="logo" aria-label="Marwa Safa home">
+      <img src="logo-mark.png" alt="Marwa Safa logo" class="logo-img">
+      <span class="logo-text">Marwa <span>Safa</span></span>
+    </a>
     <nav>
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
@@ -31,37 +40,102 @@
 
 <section>
   <div class="container">
-    <div class="grid">
-      <div class="card">
-        <h3>Getting Started Online</h3>
-        <p>Coming soon. Your first article will appear here.</p>
+    <div class="chips-bar"><button class="chip active" data-f="all">All</button><button class="chip" data-f="business">Business Registration</button><button class="chip" data-f="website">Website &amp; Hosting</button><button class="chip" data-f="ai">AI &amp; SEO</button><button class="chip" data-f="security">VPN &amp; Security</button><button class="chip" data-f="affiliate">Affiliate Marketing</button></div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(290px,1fr))">
+      <div class="card post" data-cat="business">
+        <span class="tagline">BUSINESS REGISTRATION</span>
+        <h3>How to Register an LLC in the USA</h3>
+        <p>An LLC is one of the most common ways to start a business in the USA. This guide walks through the main steps in simple language.</p>
+        <a class="more" href="how-to-register-llc-usa.html">Read Guide →</a>
       </div>
-      <div class="card">
-        <h3>Choosing Your Tools</h3>
-        <p>Coming soon. Your second article will appear here.</p>
+      <div class="card post" data-cat="affiliate">
+        <span class="tagline">AFFILIATE MARKETING</span>
+        <h3>What Is Affiliate Marketing? A Beginner's Guide</h3>
+        <p>Affiliate marketing is a simple idea: you recommend a product or service, and you earn a commission when someone buys through your link.</p>
+        <a class="more" href="what-is-affiliate-marketing.html">Read Guide →</a>
       </div>
-      <div class="card">
-        <h3>Growing Your Traffic</h3>
-        <p>Coming soon. Your third article will appear here.</p>
+      <div class="card post" data-cat="affiliate">
+        <span class="tagline">AFFILIATE MARKETING</span>
+        <h3>How to Get Approved for Affiliate Programs</h3>
+        <p>No one can promise that an affiliate application will be accepted, because every company has its own rules. But you can make your website and application look ready, and that helps.</p>
+        <a class="more" href="how-to-get-approved-for-affiliate-programs.html">Read Guide →</a>
+      </div>
+      <div class="card post" data-cat="business">
+        <span class="tagline">BUSINESS REGISTRATION</span>
+        <h3>How to Register a UK Limited Company (LTD)</h3>
+        <p>A UK private limited company is a popular way to run a business. Companies are registered with Companies House, and you can do it online.</p>
+        <a class="more" href="uk-limited-company-guide.html">Read Guide →</a>
+      </div>
+      <div class="card post" data-cat="website">
+        <span class="tagline">WEBSITE &AMP; HOSTING</span>
+        <h3>How to Choose a Web Host and Domain Name</h3>
+        <p>Two things are needed to put a website online: a domain name and hosting. Here is how to choose both without wasting money.</p>
+        <a class="more" href="choosing-hosting-and-domain.html">Read Guide →</a>
+      </div>
+      <div class="card post" data-cat="website">
+        <span class="tagline">WEBSITE &AMP; HOSTING</span>
+        <h3>Website Builder vs. Web Hosting: Which Should You Choose?</h3>
+        <p>Beginners often ask whether to use a website builder or buy hosting. The right choice depends on how much time, control and technical work you want.</p>
+        <a class="more" href="website-builder-vs-web-hosting.html">Read Guide →</a>
+      </div>
+      <div class="card post" data-cat="ai">
+        <span class="tagline">AI &AMP; SEO</span>
+        <h3>SEO Basics for Beginners</h3>
+        <p>SEO means making your website easier to find on Google. You do not need to be technical to start. These basics will take you far.</p>
+        <a class="more" href="seo-basics-for-beginners.html">Read Guide →</a>
+      </div>
+      <div class="card post" data-cat="ai">
+        <span class="tagline">AI &AMP; SEO</span>
+        <h3>How to Use AI Tools in Your Small Business</h3>
+        <p>AI tools can save hours every week. They work best when you treat them as an assistant that needs your review.</p>
+        <a class="more" href="ai-tools-for-small-business.html">Read Guide →</a>
+      </div>
+      <div class="card post" data-cat="security">
+        <span class="tagline">VPN &AMP; SECURITY</span>
+        <h3>Online Security Checklist for Small Businesses</h3>
+        <p>You do not need to be a security expert to protect your business. These ten habits stop most common problems.</p>
+        <a class="more" href="online-security-checklist-small-business.html">Read Guide →</a>
+      </div>
+      <div class="card post" data-cat="security">
+        <span class="tagline">VPN &AMP; SECURITY</span>
+        <h3>How to Choose a VPN</h3>
+        <p>A VPN can improve your privacy online, but not all VPNs are the same. Here is what to know before you choose one.</p>
+        <a class="more" href="how-to-choose-a-vpn.html">Read Guide →</a>
       </div>
     </div>
-    <p style="text-align:center;margin-top:30px;color:#5b626b">Articles are added over time. Ask Claude to write a new article page for you any time.</p>
   </div>
 </section>
+
+<script>
+document.querySelectorAll('.chip').forEach(function (b) {
+  b.addEventListener('click', function () {
+    document.querySelectorAll('.chip').forEach(function (x) { x.classList.remove('active'); });
+    b.classList.add('active');
+    var f = b.getAttribute('data-f');
+    document.querySelectorAll('.post').forEach(function (p) {
+      p.style.display = (f === 'all' || p.getAttribute('data-cat') === f) ? '' : 'none';
+    });
+  });
+});
+</script>
 
 <footer>
   <div class="container">
     <div class="foot-grid">
       <div>
-        <a href="index.html" class="logo" style="margin-bottom:10px">Marwa<span>Safa</span>LLC</a>
+        <a href="index.html" class="logo" aria-label="Marwa Safa LLC home">
+          <span class="logo-tile"><img src="logo-mark.png" alt="" class="logo-img"></span>
+          <span class="logo-text">Marwa Safa LLC</span>
+        </a>
         <p>Business and digital resources for modern entrepreneurs.</p>
+        <p style="margin-top:10px"><a href="mailto:contact@marwasafallc.com" style="display:inline">contact@marwasafallc.com</a></p>
       </div>
       <div>
         <h4>Services</h4>
-        <a href="services.html#business">Business Registration</a>
-        <a href="services.html#website">Website &amp; Hosting</a>
-        <a href="services.html#ai">AI &amp; SEO</a>
-        <a href="services.html#security">VPN &amp; Security</a>
+        <a href="business-registration.html">Business Registration</a>
+        <a href="website-hosting.html">Website &amp; Hosting</a>
+        <a href="ai-seo.html">AI &amp; SEO</a>
+        <a href="vpn-security.html">VPN &amp; Security</a>
       </div>
       <div>
         <h4>Company</h4>
@@ -76,7 +150,7 @@
         <a href="terms.html">Terms &amp; Conditions</a>
       </div>
     </div>
-    <div class="copy">© 2026 MarwaSafaLLC. All rights reserved.</div>
+    <div class="copy">© 2026 Marwa Safa LLC. All rights reserved.</div>
   </div>
 </footer>
 
