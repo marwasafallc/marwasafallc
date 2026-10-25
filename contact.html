@@ -75,6 +75,8 @@
 </div>
 
 <script>
+// The email address that receives the form messages. Change only this line if needed.
+var FORM_TO = 'contact@marwasafallc.com';
 var form = document.getElementById('contactForm');
 var msg = document.getElementById('formMsg');
 var btn = document.getElementById('sendBtn');
@@ -92,7 +94,7 @@ form.addEventListener('submit', function (e) {
   var data = new FormData(form);
   data.append('_subject', 'New message from Marwa Safa website');
   data.append('_template', 'table');
-  fetch('https://formsubmit.co/ajax/contact@marwasafallc.com', {
+  fetch('https://formsubmit.co/ajax/' + FORM_TO, {
     method: 'POST',
     headers: { 'Accept': 'application/json' },
     body: data
@@ -101,7 +103,11 @@ form.addEventListener('submit', function (e) {
       msg.className = 'msg ok';
       msg.textContent = 'Thank you! Your message has been sent. We will reply soon.';
       form.reset();
-    } else { throw new Error('failed'); }
+    } else {
+      var why = j.message ? ' (' + j.message + ')' : '';
+      msg.className = 'msg err';
+      msg.textContent = 'Sorry, the message could not be sent' + why + '. Please email us directly at contact@marwasafallc.com.';
+    }
   }).catch(function () {
     msg.className = 'msg err';
     msg.textContent = 'Sorry, the message could not be sent. Please email us directly at contact@marwasafallc.com.';
@@ -139,7 +145,6 @@ form.addEventListener('submit', function (e) {
       <div>
         <h4>Legal</h4>
         <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
         <a href="terms.html">Terms &amp; Conditions</a>
       </div>
     </div>
