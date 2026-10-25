@@ -80,6 +80,14 @@ var FORM_TO = 'contact@marwasafallc.com';
 var form = document.getElementById('contactForm');
 var msg = document.getElementById('formMsg');
 var btn = document.getElementById('sendBtn');
+function addFallback() {
+  var body = encodeURIComponent('Name: ' + form.name.value) + '%0A' + encodeURIComponent('Email: ' + form.email.value) + '%0A' + encodeURIComponent('Topic: ' + form.topic.value) + '%0A%0A' + encodeURIComponent(form.message.value);
+  var a = document.createElement('a');
+  a.href = 'mailto:contact@marwasafallc.com?subject=' + encodeURIComponent('Message from the Marwa Safa website') + '&body=' + body;
+  a.textContent = ' Click here to send it from your email app instead.';
+  a.style.textDecoration = 'underline';
+  msg.appendChild(a);
+}
 form.addEventListener('submit', function (e) {
   e.preventDefault();
   msg.className = 'msg';
@@ -107,10 +115,12 @@ form.addEventListener('submit', function (e) {
       var why = j.message ? ' (' + j.message + ')' : '';
       msg.className = 'msg err';
       msg.textContent = 'Sorry, the message could not be sent' + why + '. Please email us directly at contact@marwasafallc.com.';
+      addFallback();
     }
   }).catch(function () {
     msg.className = 'msg err';
     msg.textContent = 'Sorry, the message could not be sent. Please email us directly at contact@marwasafallc.com.';
+    addFallback();
   }).finally(function () {
     btn.disabled = false;
     btn.textContent = 'Send Message';
