@@ -162,3 +162,9 @@ footer p a{color:#ddd}
 .msg{padding:14px 18px;border-radius:8px;font-weight:600;display:none;margin-top:6px}
 .msg.ok{display:block;background:#e8f7ee;color:#146c3a;border-left:4px solid #1fa75a}
 .msg.err{display:block;background:var(--red-soft);color:var(--red-dark);border-left:4px solid var(--red)}
+
+/* Policy table of contents */
+.toc-list{columns:2;column-gap:36px;list-style:none;padding-left:0;font-size:.93rem}
+.toc-list li{margin-bottom:6px;break-inside:avoid}
+.content h2[id]{scroll-margin-top:90px}
+@media(max-width:640px){.toc-list{columns:1}}
